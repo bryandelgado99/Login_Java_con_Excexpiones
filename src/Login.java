@@ -10,7 +10,7 @@ public class Login {
     static final String DB_URL = "jdbc:mysql://localhost/epn_prueba";
     static final String USER = "root";
     static final String PASS = "root_bas3";
-    static final String QUERY = "SELECT ID_EST, CI_EST, Password_EST FROM estudiantes WHERE ID_EST = 20201213";
+    static final String QUERY = "SELECT ID_EST, CI_EST, Password_EST FROM estudiantes";
     private JPanel rootPanel;
     private JTextField userField;
     private JTextField contraseña;
@@ -35,11 +35,9 @@ public class Login {
 
                         while(rset.next()){
                             String username = String.valueOf(rset.getInt("ID_EST"));
-                            System.out.println(username);
-                            System.out.println(userinput);
 
-                            if(username == userinput){
-                                System.out.println("Hola");
+                            if(username.equals(userinput)){
+                                System.out.println("\nHola");
                             }else{
                                 System.out.println("Adios");
                             }
