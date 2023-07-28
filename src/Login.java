@@ -37,7 +37,7 @@ public class Login {
                             String username = String.valueOf(rset.getInt("ID_EST"));
 
                             if(username.equals(userinput)){
-                                System.out.println("\nHola");
+                                System.out.println("Hola");
                             }else{
                                 System.out.println("Adios");
                             }
